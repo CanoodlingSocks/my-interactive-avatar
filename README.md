@@ -1,19 +1,19 @@
 # Interactive Avatar 
+This is a personal project where I use React, TypeScript, and Material-UI to experiment with vector graphics. The website is designed to be responsive with both desktop and mobile modes.
+
 ## About the project
-This is a personal project where I'm using React, TypeScript and Material-UI.
-In this project I've experimented with vector graphics, making a navbar with a vector logo of my son's favourite toy robot and a interactive vector image of myself. 
+In this project, I've experimented with vector graphics to create a navbar with a vector logo of my son's favourite toy robot, and an interactive vector image of myself. This is my first real attempt at using vector graphics in a web development environment.
 
-I've always been curious of vector graphics and this is my first real attempt at using it in a web development environment.
-
-I want to make the website repsonsive with a desktop and a mobile mode using Material-UI.
-
-## Requirements
-To run the app, you need to run an `npm install` in the terminal and then run `npm start` to view the web page at localhost:3000/
+## Technologies Used
+* React
+* TypeScript
+* Material-UI
 
 ## Installation
-* Clone the project
-* Select the right folder path
-* Run `npm install` in the terminal
+1. Clone the repository to your local machine.
+2. Run ```npm install``` in the terminal to install the necessary dependencies.
+3. Run ```npm start``` to start the application.
+4. Open 'localhost:3000/' in your web browser to view the web page.
 
 ### Hey, it's me!
 ![Selfie](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/Lela.png)
