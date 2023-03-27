@@ -42,18 +42,30 @@ function Home() {
             <Box
                 display="flex"
                 justifyContent="center"
+                height="400px"
             >
                 <SelfiePicker {...SelfieType} />
             </Box>
             <Box
             textAlign="center"
+            marginTop="120px"
+            marginBottom="10px"
+            marginLeft="40px"
+            marginRight="40px"
+            style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                borderRadius: '15px',
+                padding: '2px',
+    
+                color: '#fff'
+              }}
             >
             <h3>{formattedImageName}</h3>
             </Box>
             <Box
                 display="flex"
                 justifyContent="center"
-                m="2rem"
+                
             >
                 <Button
                     variant="contained"
