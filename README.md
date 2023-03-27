@@ -8,6 +8,7 @@ In this project, I've experimented with vector graphics to create a navbar with 
 * React
 * TypeScript
 * Material-UI
+* Vector graphics, made in Vectornator
 
 ## Installation
 1. Clone the repository to your local machine.
