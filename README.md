@@ -14,3 +14,13 @@ To run the app, you need to run an `npm install` in the terminal and then run `n
 * Clone the project
 * Select the right folder path
 * Run `npm install` in the terminal
+
+### Hey, it's me!
+![Selfie](src\example-img\Lela.png)
+
+### Change hairstyle!
+![Short hair me](src\example-img\DifferentLela.png) ![Braided me](src\example-img\BraidedLela.png)
+![Anime me](src\example-img\OGAnimuLela.png)
+
+### Fiddle around with the css to change colour!
+![Emo me](src\example-img\EmoLela.png)![Anime me](src\example-img\AnimuLela.png)
