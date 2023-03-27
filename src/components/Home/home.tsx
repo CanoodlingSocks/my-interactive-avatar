@@ -22,6 +22,7 @@ function Home() {
 
 
     const [imageString, setImageString] = useState<string>("Lela");
+    const [displayedImageName, setDisplayedImageName] = useState<string>("Lela");
 
     const SelfieType: SelfieType = {
         randomImage: imageString
@@ -30,7 +31,11 @@ function Home() {
     function randomizeImg() {
         const randomImage = images[Math.floor(images.length * Math.random())];
         setImageString(randomImage);
+        setDisplayedImageName(randomImage);
     }
+
+    //Regex expression to split the img-namestring at the uppercased letters
+    const formattedImageName = imageString.replace(/([A-Z])/g, ' $1');
 
     return (
         <>
@@ -39,6 +44,11 @@ function Home() {
                 justifyContent="center"
             >
                 <SelfiePicker {...SelfieType} />
+            </Box>
+            <Box
+            textAlign="center"
+            >
+            <h3>{formattedImageName}</h3>
             </Box>
             <Box
                 display="flex"
