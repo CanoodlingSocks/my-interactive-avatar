@@ -1,29 +1,29 @@
 import Box from '@mui/material/Box'
-import SelfiePicker from '../SelfiePicker/selfie-picker';
+import SelfiePicker, {SelfieType} from '../SelfiePicker/selfie-picker';
 import Button from '@mui/material/Button';
 import { useState } from "react";
 
+const images = [
+    "Lela",
+    "EmoLela",
+    "AnimuLela",
+    "ShortHairLela",
+    "BraidedLela",
+    "VulcanLela",
+    "StraightHairLela",
+    "BracesLela",
+    "LelaOfGreenGables",
+    "WhatTheCat",
+    "RinguLela",
+    "DudeLela"
+];
 
 function Home() {
 
-    const images = [
-        "Lela",
-        "EmoLela",
-        "AnimuLela",
-        "ShortHairLela",
-        "BraidedLela",
-        "VulcanLela",
-        "StraightHairLela",
-        "BracesLela",
-        "LelaOfGreenGables",
-        "WhatTheCat",
-        "RinguLela",
-        "DudeLela"
-    ];
 
     const [imageString, setImageString] = useState<string>("Lela");
 
-    let SelfieType = {
+    const SelfieType: SelfieType = {
         randomImage: imageString
     }
 

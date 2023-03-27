@@ -11,7 +11,7 @@ import GreenGablesSelfieIcon from "../Selfies/greengablesselfie-icon";
 import TheRingSelfieIcon from "../Selfies/theringselfie-icon";
 import DudeSelfieIcon from "../Selfies/dudeselfie-icon";
 
-type SelfieType = {
+export type SelfieType = {
     randomImage: string
 }
 
