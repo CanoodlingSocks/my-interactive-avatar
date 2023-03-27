@@ -19,8 +19,8 @@ To run the app, you need to run an `npm install` in the terminal and then run `n
 ![Selfie](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/Lela.png)
 
 ### Change hairstyle!
-![Short hair me](src\example-img\DifferentLela.png) ![Braided me](src\example-img\BraidedLela.png)
-![Anime me](src\example-img\OGAnimuLela.png)
+![Short hair me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/DifferentLela.png) ![Braided me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/BraidedLela.png)
+![Anime me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/OGAnimuLela.png)
 
 ### Fiddle around with the css to change colour!
-![Emo me](src\example-img\EmoLela.png)![Anime me](src\example-img\AnimuLela.png)
+![Emo me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/EmoLela.png)![Anime me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/AnimuLela.png)
