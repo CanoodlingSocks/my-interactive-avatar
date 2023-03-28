@@ -45,11 +45,28 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen }: ColorPickerProps) => 
     }
   }
 
+  const handleClickHair = () => {
+    changeColor("hair", color);
+  };
+
+  const handleClickShirt = () => {
+    changeColor("shirt", color);
+  };
+
+  const resetColors = () => {
+    setColor("#000000");
+    changeColor("hair", "#000000");
+    changeColor("shirt", "#000000");
+  }
+
   return (
     <>
-      <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)}anchor="left">
+      <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor="left">
         <Box width="300px" padding="1rem">
           <HexColorPicker color={color} onChange={handleColorChange} />
+          <Button onClick={handleClickHair}>Change Hair Color</Button>
+          <Button onClick={handleClickShirt}>Change Shirt Color</Button>
+          <Button onClick={resetColors}>Reset</Button>
         </Box>
       </Drawer>
     </>
