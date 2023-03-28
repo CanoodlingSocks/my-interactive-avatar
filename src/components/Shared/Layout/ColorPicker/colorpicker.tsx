@@ -5,7 +5,6 @@ import PaletteIcon from '@mui/icons-material/Palette';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-
 interface ColorPickerProps {
     drawerOpen: boolean;
     setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -65,11 +64,11 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen }: ColorPickerProps) => 
   };
 
   const handleClickEyeLids = () => {
-    changeColor("eyeLids", color);
+    changeColor("eyelids", color);
   };
 
   const handleClickGlasses = () => {
-    changeColor("glasses", color);
+    changeColor("eyeglasses", color);
   };
 
   const handleClickHearingAids = () => {
