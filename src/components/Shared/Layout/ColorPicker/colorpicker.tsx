@@ -1,11 +1,33 @@
 import { useState } from "react";
 import { HexColorPicker } from "react-colorful";
 import { Drawer, Button, Box } from "@mui/material";
+import PaletteIcon from '@mui/icons-material/Palette';
+import { styled } from '@mui/material/styles';
 
 interface ColorPickerProps {
     drawerOpen: boolean;
     setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
   }
+
+  interface ColorPickerBtnProps {
+    onClick: () => void;
+    isMobile: boolean;
+  }
+
+export const ColorPickerButton = ({ onClick, isMobile }: ColorPickerBtnProps) => {
+    const ResponsiveButton = styled(Button)(({ theme }) => ({
+      [theme.breakpoints.down('md')]: {
+        minWidth: 'initial',
+        padding: theme.spacing(0.5),
+      },
+    }));
+
+    return (
+        <ResponsiveButton sx={{ ml: '10px' }} onClick={onClick}>
+          {isMobile ? <PaletteIcon /> : 'COLORPICKER'}
+        </ResponsiveButton>
+      );
+    }
 
 export const ColorPicker = ({ drawerOpen, setDrawerOpen }: ColorPickerProps) => {
   const [color, setColor] = useState("#000000");
