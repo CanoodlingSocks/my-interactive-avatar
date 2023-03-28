@@ -23,5 +23,5 @@ In this project, I've experimented with vector graphics to create a navbar with 
 ![Short hair me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/DifferentLela.png) ![Braided me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/BraidedLela.png)
 ![Anime me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/OGAnimuLela.png)
 
-### Fiddle around with the css to change colour!
+### Fiddle around with the colorpicker!
 ![Emo me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/EmoLela.png)![Anime me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/AnimuLela.png)
