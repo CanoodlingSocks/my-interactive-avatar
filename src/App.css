@@ -1,16 +1,16 @@
 /* Uncomment and fiddle around with the values*/
 
 /* --- Emo palette ----*/
-/* .hair {
-  fill: rgb(0, 0, 0);
+.hair {
+  fill: rgb(255, 245, 52);
 }
 
 .lips {
-  fill: rgb(108, 0, 0);
+  fill: rgb(0, 245, 16);
 }
 
 .eyelids {
-  fill:rgb(3, 4, 11)
+  fill:rgb(0, 21, 182)
 }
 
 .hearingaid-inner {
@@ -22,5 +22,5 @@
 }
 
 .shirt {
-  fill:black
-} */
+  fill:rgb(255, 0, 183)
+}
