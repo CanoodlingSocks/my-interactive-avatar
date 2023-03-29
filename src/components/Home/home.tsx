@@ -92,7 +92,7 @@ function Home() {
         </Button>
         <ColorPickerButton onClick={() => setDrawerOpen(true)} isMobile={isMobile} />
       </Box>
-      <ColorPicker drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
+      <ColorPicker drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} imageString={imageString}/>
     </>
   )
 }

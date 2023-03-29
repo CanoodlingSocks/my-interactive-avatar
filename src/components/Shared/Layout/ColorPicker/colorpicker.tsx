@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 interface ColorPickerProps {
     drawerOpen: boolean;
     setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    imageString: string;
   }
 
   interface ColorPickerBtnProps {
@@ -30,7 +31,7 @@ export const ColorPickerButton = ({ onClick, isMobile }: ColorPickerBtnProps) =>
       );
     }
 
-export const ColorPicker = ({ drawerOpen, setDrawerOpen }: ColorPickerProps) => {
+export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPickerProps) => {
   const [color, setColor] = useState("#000000");
 
   const handleColorChange = (newColor: string) => {
@@ -75,6 +76,13 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen }: ColorPickerProps) => 
     changeColor("hearingaid-inner", color);
   };
 
+  //Conditionally render a "Beard" button
+  const isDudeLela = imageString === "DudeLela";
+
+  const handleClickBeard = () => {
+    changeColor("beard", color);
+  }
+
   function resetColors() {
     const elements = document.querySelectorAll("[data-color]");
     for (let i = 0; i < elements.length; i++) {
@@ -98,6 +106,14 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen }: ColorPickerProps) => 
             Hair
           </Typography>
           <Button onClick={handleClickHair}>Change Hair Color</Button>
+          {isDudeLela && (
+          <>
+            <Typography variant="h6" gutterBottom>
+              Beard
+            </Typography>
+            <Button onClick={handleClickBeard}>Change Beard Color</Button>
+          </>
+        )}
           <Typography variant="h6" gutterBottom>
             Makeup
           </Typography>
