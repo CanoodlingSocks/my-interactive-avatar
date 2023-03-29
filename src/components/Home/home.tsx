@@ -26,7 +26,12 @@ const images = [
     "LelaOfGreenGables",
     "WhatTheCat",
     "RinguLela",
-    "DudeLela"
+    "DudeLela",
+    "FunkyLela",
+    "Rockin'Lela",
+    "FreshlyShoweredLela",
+    "PoofyLela",
+    "ChildLela"
 ];
 
 function Home() {
