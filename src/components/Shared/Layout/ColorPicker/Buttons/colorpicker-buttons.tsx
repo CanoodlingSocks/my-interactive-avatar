@@ -1,10 +1,9 @@
-import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps } from "../Interfaces/button-interfaces";
+import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps } from "../Interfaces/button-interfaces";
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
 //These are sets of buttons that depending on what imageString parameter is passed to them will render dynamically and set the color of the corresponding element
-export const HearingAidButtons = (props: HearingAidButtonsProps) => {
-   return(
+export const HearingAidButtons = (props: HearingAidButtonsProps) => (
        <>
     <Typography variant="h6" gutterBottom>
     Hearingaid
@@ -12,11 +11,10 @@ export const HearingAidButtons = (props: HearingAidButtonsProps) => {
     <Button onClick={props.handleClickOuter}>Change Hearingaid Color</Button>
     <Button onClick={props.handleClickInner}>Change Earmold Color</Button>
     </>
-       )
-}
+)
 
-export const MakeupButtons = (props: MakeupButtonsProps) => {
-    return(
+
+export const MakeupButtons = (props: MakeupButtonsProps) => (
         <>
         <Typography variant="h6" gutterBottom>
         Makeup
@@ -24,8 +22,25 @@ export const MakeupButtons = (props: MakeupButtonsProps) => {
         <Button onClick={props.handleClickLips}>Lipstick</Button>
         <Button onClick={props.handleClickEyelids}>Eyeshadow</Button>
         </>
-    )
-}
+)
+
+
+export const StandardButtons = (props: StandardButtonsProps) => (
+    <>
+    <Typography variant="h6"mt={2}>
+      Hair
+    </Typography>
+    <Button onClick={props.handleClickHair}>Change Fur Color</Button>
+    <Typography variant="h6">
+    Glasses
+      </Typography>
+      <Button onClick={props.handleClickGlasses}>Change Glasses Color</Button>
+      <Typography variant="h6" gutterBottom>
+        Shirt
+      </Typography>
+      <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>   
+  </>
+)
 
 export const CatButtons = (props: CatButtonsProps) => (
     <>
@@ -62,8 +77,7 @@ export const DudeButtons = (
     </>
   );
   
-export const FunkyButtons = (props: FunkyButtonsProps) => {
-return(
+export const FunkyButtons = (props: FunkyButtonsProps) => (
 <>
       <Typography variant="h6" mt={2}>
         Hair
@@ -80,5 +94,4 @@ return(
       </Typography>
       <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>
     </>
-      )
-}
+)

@@ -1,3 +1,9 @@
+export interface StandardButtonsProps {
+  handleClickHair: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+}
+
 export interface CatButtonsProps {
   handleClickHair: () => void;
   handleClickEyes: () => void;
