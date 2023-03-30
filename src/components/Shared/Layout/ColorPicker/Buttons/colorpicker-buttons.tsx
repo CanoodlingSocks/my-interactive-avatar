@@ -1,4 +1,4 @@
-import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps, GreenGablesButtonsProps, RockerButtonsProps } from "../Interfaces/button-interfaces";
+import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps, GreenGablesButtonsProps, RockerButtonsProps, NoGlassesButtonsProps, AnimuButtonsProps } from "../Interfaces/button-interfaces";
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
@@ -13,7 +13,6 @@ export const HearingAidButtons = (props: HearingAidButtonsProps) => (
     </>
 )
 
-
 export const MakeupButtons = (props: MakeupButtonsProps) => (
         <>
         <Typography variant="h6" gutterBottom>
@@ -23,7 +22,6 @@ export const MakeupButtons = (props: MakeupButtonsProps) => (
         <Button onClick={props.handleClickEyelids}>Eyeshadow</Button>
         </>
 )
-
 
 export const StandardButtons = (props: StandardButtonsProps) => (
     <>
@@ -40,6 +38,19 @@ export const StandardButtons = (props: StandardButtonsProps) => (
       </Typography>
       <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>   
   </>
+)
+
+export const NoGlassesButtons = (props: NoGlassesButtonsProps) => (
+  <>
+  <Typography variant="h6"mt={2}>
+    Hair
+  </Typography>
+  <Button onClick={props.handleClickHair}>Change Hair Color</Button>
+    <Typography variant="h6" gutterBottom>
+      Shirt
+    </Typography>
+    <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>   
+</>
 )
 
 export const CatButtons = (props: CatButtonsProps) => (
@@ -96,6 +107,26 @@ export const FunkyButtons = (props: FunkyButtonsProps) => (
     </>
 )
 
+export const AnimuButtons = (props: AnimuButtonsProps) => (
+  <>
+   <Typography variant="h6" mt={2}>
+        Hair
+      </Typography>
+      <Button onClick={props.handleClickHair}>Change Hair Color</Button>
+      <Button onClick={props.handleClickUnderCut}>Change Undercut Color</Button>
+      <Typography variant="h6" gutterBottom>
+        Glasses & Accessories
+      </Typography>
+      <Button onClick={props.handleClickGlasses}>Change Glasses Color</Button>
+      <Button onClick={props.handleClickJewellery}>Change Stars Color</Button>
+      <Button onClick={props.handleClickHat}>Change Bow Color</Button>
+      <Typography variant="h6" gutterBottom>
+        Sailorfuku
+      </Typography>
+      <Button onClick={props.handleClickShirt}>Change Sailorfuku Color</Button>
+  </>
+)
+
 export const RockerButtons = (props: RockerButtonsProps) => (
   <>
 <Typography variant="h6" mt={2}>
@@ -114,6 +145,7 @@ export const RockerButtons = (props: RockerButtonsProps) => (
       <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>
   </>
 )
+
 
 export const GreenGablesButtons = (props: GreenGablesButtonsProps) => (
 <>

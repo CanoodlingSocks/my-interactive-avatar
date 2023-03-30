@@ -54,3 +54,12 @@ export interface NoGlassesButtonsProps {
   handleClickHair: () => void;
   handleClickShirt: () => void;
 }
+
+export interface AnimuButtonsProps {
+  handleClickHair: () => void;
+  handleClickUnderCut: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+  handleClickJewellery: () => void;
+  handleClickHat: () => void;
+}
