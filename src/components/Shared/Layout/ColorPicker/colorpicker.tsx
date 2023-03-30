@@ -4,7 +4,7 @@ import { Drawer, Button, Box } from "@mui/material";
 import PaletteIcon from '@mui/icons-material/Palette';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import { CatButtons, DudeButtons, HearingAidButtons } from "./Buttons/colorpicker-buttons";
+import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons } from "./Buttons/colorpicker-buttons";
 
 
 interface ColorPickerProps {
@@ -86,14 +86,17 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
     changeColor("iris", color);
   };
 
-  //Conditionally render a "Beard" button
-  const isDudeLela = imageString === "DudeLela";
+  const handleClickJewellery = () => {
+    changeColor("jewellery", color);
+  };
 
   const handleClickBeard = () => {
     changeColor("beard", color);
-  }
+  };
 
-  const isCat = imageString === "WhatTheCat";
+  const handleClickUnderCut = () => {
+    changeColor("undercut", color)
+  }
 
   function resetColors() {
     const elements = document.querySelectorAll("[data-color]");
@@ -128,7 +131,24 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
       />
       </>
       )
-    } else {
+    } else if (imageString === "FunkyLela") {
+      return (
+        <>
+      <FunkyButtons 
+      handleClickHair={handleClickHair}
+      handleClickUnderCut={handleClickUnderCut}
+      handleClickGlasses={handleClickGlasses}
+      handleClickJewellery={handleClickJewellery}
+      handleClickShirt={handleClickShirt}
+      />
+      <HearingAidButtons 
+      handleClickOuter={handleClickOuter}
+      handleClickInner={handleClickInner}
+      />
+      </>
+      )
+      }
+      else {
       return null;
     }
   };
