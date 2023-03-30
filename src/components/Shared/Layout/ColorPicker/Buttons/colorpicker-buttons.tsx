@@ -30,7 +30,7 @@ export const StandardButtons = (props: StandardButtonsProps) => (
     <Typography variant="h6"mt={2}>
       Hair
     </Typography>
-    <Button onClick={props.handleClickHair}>Change Fur Color</Button>
+    <Button onClick={props.handleClickHair}>Change Hair Color</Button>
     <Typography variant="h6">
     Glasses
       </Typography>
