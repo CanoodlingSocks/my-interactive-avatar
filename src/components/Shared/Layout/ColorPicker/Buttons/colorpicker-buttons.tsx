@@ -10,9 +10,6 @@ export const HearingAidButtons = (props: HearingAidButtonsProps) => {
     Hearingaid
     </Typography>
     <Button onClick={props.handleClickOuter}>Change Hearingaid Color</Button>
-    <Typography variant="h6" gutterBottom>
-    Earmold
-    </Typography>
     <Button onClick={props.handleClickInner}>Change Earmold Color</Button>
     </>
        )
