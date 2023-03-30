@@ -4,6 +4,8 @@ import { Drawer, Button, Box } from "@mui/material";
 import PaletteIcon from '@mui/icons-material/Palette';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import { CatButtons, DudeButtons, HearingAidButtons } from "./Buttons/colorpicker-buttons";
+
 
 interface ColorPickerProps {
     drawerOpen: boolean;
@@ -72,8 +74,16 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
     changeColor("eyeglasses", color);
   };
 
-  const handleClickHearingAids = () => {
+  const handleClickOuter = () => {
+    changeColor("hearingaid-outer", color)
+  };
+
+  const handleClickInner = () => {
     changeColor("hearingaid-inner", color);
+  };
+
+  const handleClickEyes = () => {
+    changeColor("iris", color);
   };
 
   //Conditionally render a "Beard" button
@@ -97,6 +107,33 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
     setColor("#000000");
   }
 
+  const renderButtons = () => {
+    if (imageString === "WhatTheCat") {
+      return <CatButtons 
+      handleClickHair={handleClickHair}
+      handleClickEyes={handleClickEyes}
+      />;
+    } else if (imageString === "DudeLela") {
+      return (
+        <>
+      <DudeButtons 
+      handleClickHair={handleClickHair}
+      handleClickBeard={handleClickBeard}
+      handleClickGlasses={handleClickGlasses}
+      handleClickShirt={handleClickShirt}
+      />
+      <HearingAidButtons 
+      handleClickOuter={handleClickOuter}
+      handleClickInner={handleClickInner}
+      />
+      </>
+      )
+    } else {
+      return null;
+    }
+  };
+
+
   return (
     <>
       <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor="left">
@@ -104,11 +141,23 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
           <Box display="flex" justifyContent="center">
             <HexColorPicker color={color} onChange={handleColorChange} />
           </Box>
-          
-          <Typography variant="h6" gutterBottom>
+          {renderButtons()}
+        </Box> 
+        <Box textAlign="center">
+          <Button variant="contained" onClick={resetColors}>
+            Reset
+          </Button>
+        </Box>
+      </Drawer>
+    </>
+  );  
+};
+          {/* <Typography variant="h6" gutterBottom>
             Hair
           </Typography>
-          <Button onClick={handleClickHair}>Change Hair Color</Button>
+          <Button onClick={handleClickHair}>
+          {isCat ? "Change Fur Color" : "Change Hair Color"}
+          </Button>
           {isDudeLela && (
           <>
             <Typography variant="h6" gutterBottom>
@@ -122,19 +171,5 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
           </Typography>
           <Button onClick={handleClickLips}>Lipstick</Button>
           <Button onClick={handleClickEyeLids}>Eyeshadow</Button>
-          <Typography variant="h6" gutterBottom>
-            Clothing & Accessories
-          </Typography>
-          <Button onClick={handleClickGlasses}>Change Glasses Color</Button>
-          <Button onClick={handleClickShirt}>Change Shirt Color</Button>
-          <Button onClick={handleClickHearingAids}>Change Hearingaids Color</Button>
-        </Box>
-        <Box textAlign="center">
-          <Button variant="contained" onClick={resetColors}>
-            Reset
-          </Button>
-        </Box>
-      </Drawer>
-    </>
-  );  
-};
+         
+          <Button onClick={handleClickHearingAids}>Change Hearingaids Color</Button>*/}
