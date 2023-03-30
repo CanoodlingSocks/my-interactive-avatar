@@ -49,17 +49,16 @@ function Home() {
     }
 
     function randomizeImg() {
-        const randomImage = images[Math.floor(images.length * Math.random())];
-        setImageString(randomImage);
-        setDisplayedImageName(randomImage);
+      let newImage;
+      do {
+        newImage = images[Math.floor(images.length * Math.random())];
+      } while (newImage === displayedImageName);
+      setImageString(newImage);
+      setDisplayedImageName(newImage);
     }
 
     //Regex expression to split the img-namestring at the uppercased letters
     const formattedImageName = imageString.replace(/([A-Z])/g, ' $1');
-
-    const handleColorPickerOpen = () => {
-        setDrawerOpen(true);
-    };
 
     return (
         <>
