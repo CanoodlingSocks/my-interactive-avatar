@@ -1,4 +1,4 @@
-import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps } from "../Interfaces/button-interfaces";
+import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps, GreenGablesButtonsProps } from "../Interfaces/button-interfaces";
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
@@ -111,4 +111,22 @@ export const RinguMsg = () => (
         SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
         SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS 
     </Typography>
+)
+
+export const GreenGablesButtons = (props: GreenGablesButtonsProps) => (
+<>
+<Typography variant="h6" mt={2}>
+        Hair
+      </Typography>
+      <Button onClick={props.handleClickHair}>Change Hair Color</Button>
+      <Typography variant="h6" gutterBottom>
+        Accessories
+      </Typography>
+      <Button onClick={props.handleClickHat}>Change Hat Color</Button>
+      <Button onClick={props.handleClickHairbands}>Change Hairbands Color</Button>
+      <Typography variant="h6" gutterBottom>
+        Shirt
+      </Typography>
+      <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>
+</>
 )

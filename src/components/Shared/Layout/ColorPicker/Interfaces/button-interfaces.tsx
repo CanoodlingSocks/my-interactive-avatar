@@ -34,3 +34,10 @@ export interface MakeupButtonsProps {
   handleClickLips: () => void;
   handleClickEyelids: () => void;
 }
+
+export interface GreenGablesButtonsProps {
+  handleClickHair: () => void;
+  handleClickShirt: () => void;
+  handleClickHat: () => void;
+  handleClickHairbands: () => void;
+}

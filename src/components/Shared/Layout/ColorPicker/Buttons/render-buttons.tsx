@@ -1,6 +1,6 @@
-import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons, MakeupButtons, StandardButtons, RinguMsg } from "../Buttons/colorpicker-buttons";
+import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons, MakeupButtons, StandardButtons, RinguMsg, GreenGablesButtons } from "../Buttons/colorpicker-buttons";
 import { 
-  handleClickHair, handleClickBeard, handleClickEyelids, handleClickEyes, handleClickGlasses, handleClickInner, handleClickJewellery, handleClickLips, handleClickOuter, handleClickShirt, handleClickUnderCut
+  handleClickHair, handleClickBeard, handleClickEyelids, handleClickEyes, handleClickGlasses, handleClickInner, handleClickJewellery, handleClickLips, handleClickOuter, handleClickShirt, handleClickUnderCut, handleClickHat, handleClickHairbands
 } from "../onClick-handlers";
 
 //This function renders buttons dynamically based on the value of the imageString prop, and passes in the appropriate handleClick props with a color parameter.
@@ -35,6 +35,17 @@ export const RenderButtons = (imageString: string,color: string) => {
             <>
             <RinguMsg />
             </>
+        )
+      }
+      else if (imageString === "LelaOfGreenGables") {
+        return(
+          <>
+          <GreenGablesButtons handleClickHair={() => handleClickHair(color)} handleClickHat={() => handleClickHat(color)}
+          handleClickHairbands={() => handleClickHairbands(color)} handleClickShirt={() => handleClickShirt(color)}
+          />
+          <MakeupButtons handleClickLips={() => handleClickLips(color)}handleClickEyelids={() => handleClickEyelids(color)}/>
+          <HearingAidButtons handleClickOuter={() => handleClickOuter(color)} handleClickInner={() => handleClickInner(color)} />
+          </>
         )
       }
       else {

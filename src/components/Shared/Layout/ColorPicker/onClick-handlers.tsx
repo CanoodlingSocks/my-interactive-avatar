@@ -42,5 +42,13 @@ export const handleClickBeard = (color: string) => {
   };
 
 export const handleClickUnderCut = (color: string) => {
-    changeColor("undercut", color)
-  }
+    changeColor("undercut", color);
+};
+
+export const handleClickHat = (color: string) => {
+  changeColor("hat", color);
+};
+
+export const handleClickHairbands = (color: string) => {
+  changeColor("hairband", color);
+};
