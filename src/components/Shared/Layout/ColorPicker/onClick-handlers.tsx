@@ -1,5 +1,6 @@
 import { changeColor } from "./colorpicker";
 
+//OnClick handlers that takes in a color string and sets the color depending on the className. Every handleClick is then passed as props to colorpicker-button.tsx
 export const handleClickHair = (color: string) => {
     changeColor("hair", color);
   };
@@ -12,7 +13,7 @@ export const handleClickShirt = (color: string) => {
     changeColor("lips", color);
   };
 
-export  const handleClickEyeLids = (color: string) => {
+export  const handleClickEyelids = (color: string) => {
     changeColor("eyelids", color);
   };
 

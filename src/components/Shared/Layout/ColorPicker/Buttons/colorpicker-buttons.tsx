@@ -1,10 +1,10 @@
-import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps } from "../Interfaces/button-interfaces";
+import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps } from "../Interfaces/button-interfaces";
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
+//These are sets of buttons that depending on what imageString parameter is passed to them will render dynamically and set the color of the corresponding element
 export const HearingAidButtons = (props: HearingAidButtonsProps) => {
    return(
-
        <>
     <Typography variant="h6" gutterBottom>
     Hearingaid
@@ -13,6 +13,18 @@ export const HearingAidButtons = (props: HearingAidButtonsProps) => {
     <Button onClick={props.handleClickInner}>Change Earmold Color</Button>
     </>
        )
+}
+
+export const MakeupButtons = (props: MakeupButtonsProps) => {
+    return(
+        <>
+        <Typography variant="h6" gutterBottom>
+        Makeup
+        </Typography>
+        <Button onClick={props.handleClickLips}>Lipstick</Button>
+        <Button onClick={props.handleClickEyelids}>Eyeshadow</Button>
+        </>
+    )
 }
 
 export const CatButtons = (props: CatButtonsProps) => (

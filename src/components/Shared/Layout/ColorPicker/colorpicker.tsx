@@ -55,8 +55,6 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
     setColor("#000000");
   }
 
-
-
   return (
     <>
       <Drawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor="left">
@@ -75,24 +73,3 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
     </>
   );  
 };
-          {/* <Typography variant="h6" gutterBottom>
-            Hair
-          </Typography>
-          <Button onClick={handleClickHair}>
-          {isCat ? "Change Fur Color" : "Change Hair Color"}
-          </Button>
-          {isDudeLela && (
-          <>
-            <Typography variant="h6" gutterBottom>
-              Beard
-            </Typography>
-            <Button onClick={handleClickBeard}>Change Beard Color</Button>
-          </>
-        )}
-          <Typography variant="h6" gutterBottom>
-            Makeup
-          </Typography>
-          <Button onClick={handleClickLips}>Lipstick</Button>
-          <Button onClick={handleClickEyeLids}>Eyeshadow</Button>
-         
-          <Button onClick={handleClickHearingAids}>Change Hearingaids Color</Button>*/}

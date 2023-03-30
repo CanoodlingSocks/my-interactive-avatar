@@ -21,4 +21,10 @@ export interface FunkyButtonsProps {
   handleClickGlasses: () => void;
   handleClickShirt: () => void;
   handleClickJewellery: () => void;
+  handleClickLips: () => void;
+}
+
+export interface MakeupButtonsProps {
+  handleClickLips: () => void;
+  handleClickEyelids: () => void;
 }
