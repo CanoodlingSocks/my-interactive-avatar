@@ -1,4 +1,4 @@
-import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps } from "./button-interfaces";
+import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps } from "../Interfaces/button-interfaces";
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 

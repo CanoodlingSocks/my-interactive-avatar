@@ -1,21 +1,26 @@
+import PaletteIcon from '@mui/icons-material/Palette';
 import { useState } from "react";
 import { HexColorPicker } from "react-colorful";
 import { Drawer, Button, Box } from "@mui/material";
-import PaletteIcon from '@mui/icons-material/Palette';
 import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
+import { ColorPickerProps, ColorPickerBtnProps } from './Interfaces/colorpicker-interfaces';
 import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons } from "./Buttons/colorpicker-buttons";
+import { 
+  handleClickHair, handleClickBeard, handleClickEyeLids, handleClickEyes, handleClickGlasses, handleClickInner, handleClickJewellery, handleClickLips, handleClickOuter, handleClickShirt, handleClickUnderCut
+} from "./onClick-handlers";
 
-
-interface ColorPickerProps {
-    drawerOpen: boolean;
-    setDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
-    imageString: string;
-  }
-
-  interface ColorPickerBtnProps {
-    onClick: () => void;
-    isMobile: boolean;
+  export function changeColor(className: string, newColor: string) {
+    const elements = document.getElementsByClassName(
+      className
+    ) as HTMLCollectionOf<SVGElement>;
+    for (let i = 0; i < elements.length; i++) {
+      const element = elements[i];
+      if (!element.hasAttribute("data-color")) {
+        // Store the original color as a data attribute
+        element.setAttribute("data-color", element.style.fill);
+      }
+      element.style.fill = newColor;
+    }
   }
 
 export const ColorPickerButton = ({ onClick, isMobile }: ColorPickerBtnProps) => {
@@ -39,64 +44,7 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
   const handleColorChange = (newColor: string) => {
     setColor(newColor);
   };
-
-  function changeColor(className: string, newColor: string) {
-    const elements = document.getElementsByClassName(
-      className
-    ) as HTMLCollectionOf<SVGElement>;
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
-      if (!element.hasAttribute("data-color")) {
-        // Store the original color as a data attribute
-        element.setAttribute("data-color", element.style.fill);
-      }
-      element.style.fill = newColor;
-    }
-  }
-
-  const handleClickHair = () => {
-    changeColor("hair", color);
-  };
-
-  const handleClickShirt = () => {
-    changeColor("shirt", color);
-  };
-
-  const handleClickLips = () => {
-    changeColor("lips", color);
-  };
-
-  const handleClickEyeLids = () => {
-    changeColor("eyelids", color);
-  };
-
-  const handleClickGlasses = () => {
-    changeColor("eyeglasses", color);
-  };
-
-  const handleClickOuter = () => {
-    changeColor("hearingaid-outer", color)
-  };
-
-  const handleClickInner = () => {
-    changeColor("hearingaid-inner", color);
-  };
-
-  const handleClickEyes = () => {
-    changeColor("iris", color);
-  };
-
-  const handleClickJewellery = () => {
-    changeColor("jewellery", color);
-  };
-
-  const handleClickBeard = () => {
-    changeColor("beard", color);
-  };
-
-  const handleClickUnderCut = () => {
-    changeColor("undercut", color)
-  }
+  
 
   function resetColors() {
     const elements = document.querySelectorAll("[data-color]");
@@ -112,39 +60,19 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
 
   const renderButtons = () => {
     if (imageString === "WhatTheCat") {
-      return <CatButtons 
-      handleClickHair={handleClickHair}
-      handleClickEyes={handleClickEyes}
-      />;
+      return <CatButtons handleClickHair={() => handleClickHair(color)} handleClickEyes={() => handleClickEyes(color)} />;
     } else if (imageString === "DudeLela") {
       return (
         <>
-      <DudeButtons 
-      handleClickHair={handleClickHair}
-      handleClickBeard={handleClickBeard}
-      handleClickGlasses={handleClickGlasses}
-      handleClickShirt={handleClickShirt}
-      />
-      <HearingAidButtons 
-      handleClickOuter={handleClickOuter}
-      handleClickInner={handleClickInner}
-      />
-      </>
+          <DudeButtons handleClickHair={() => handleClickHair(color)} handleClickBeard={() => handleClickBeard(color)} handleClickGlasses={() => handleClickGlasses(color)} handleClickShirt={() => handleClickShirt(color)} />
+          <HearingAidButtons handleClickOuter={() => handleClickOuter(color)} handleClickInner={() => handleClickInner(color)} />
+        </>
       )
     } else if (imageString === "FunkyLela") {
       return (
         <>
-      <FunkyButtons 
-      handleClickHair={handleClickHair}
-      handleClickUnderCut={handleClickUnderCut}
-      handleClickGlasses={handleClickGlasses}
-      handleClickJewellery={handleClickJewellery}
-      handleClickShirt={handleClickShirt}
-      />
-      <HearingAidButtons 
-      handleClickOuter={handleClickOuter}
-      handleClickInner={handleClickInner}
-      />
+        <FunkyButtons handleClickHair={() => handleClickHair(color)} handleClickUnderCut={() => handleClickUnderCut(color)} handleClickGlasses={() => handleClickGlasses(color)} handleClickJewellery={() => handleClickJewellery(color)} handleClickShirt={() => handleClickShirt(color)} />
+        <HearingAidButtons handleClickOuter={() => handleClickOuter(color)} handleClickInner={() => handleClickInner(color)} />
       </>
       )
       }
