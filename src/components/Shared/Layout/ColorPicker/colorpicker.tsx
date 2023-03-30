@@ -83,6 +83,8 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
     changeColor("beard", color);
   }
 
+  const isCat = imageString === "WhatTheCat";
+
   function resetColors() {
     const elements = document.querySelectorAll("[data-color]");
     for (let i = 0; i < elements.length; i++) {
@@ -102,6 +104,7 @@ export const ColorPicker = ({ drawerOpen, setDrawerOpen, imageString }: ColorPic
           <Box display="flex" justifyContent="center">
             <HexColorPicker color={color} onChange={handleColorChange} />
           </Box>
+          
           <Typography variant="h6" gutterBottom>
             Hair
           </Typography>
