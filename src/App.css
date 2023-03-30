@@ -24,3 +24,23 @@
 .shirt {
   fill:rgb(255, 0, 183)
 } */
+
+.ringu-spin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ringu-spin {
+  animation: spin 2s linear infinite;
+}

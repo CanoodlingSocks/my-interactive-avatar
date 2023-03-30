@@ -1,4 +1,4 @@
-import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons, MakeupButtons, StandardButtons } from "../Buttons/colorpicker-buttons";
+import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons, MakeupButtons, StandardButtons, RinguMsg } from "../Buttons/colorpicker-buttons";
 import { 
   handleClickHair, handleClickBeard, handleClickEyelids, handleClickEyes, handleClickGlasses, handleClickInner, handleClickJewellery, handleClickLips, handleClickOuter, handleClickShirt, handleClickUnderCut
 } from "../onClick-handlers";
@@ -29,6 +29,13 @@ export const RenderButtons = (imageString: string,color: string) => {
         <HearingAidButtons handleClickOuter={() => handleClickOuter(color)} handleClickInner={() => handleClickInner(color)} />
       </>
       )
+      } 
+      else if (imageString === "RinguLela") {
+        return(
+            <>
+            <RinguMsg />
+            </>
+        )
       }
       else {
       return (
