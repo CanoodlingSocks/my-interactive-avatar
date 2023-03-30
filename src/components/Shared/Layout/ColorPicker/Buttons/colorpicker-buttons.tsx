@@ -1,4 +1,4 @@
-import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps, GreenGablesButtonsProps } from "../Interfaces/button-interfaces";
+import { CatButtonsProps, DudeButtonsProps, HearingAidButtonsProps, FunkyButtonsProps, MakeupButtonsProps, StandardButtonsProps, GreenGablesButtonsProps, RockerButtonsProps } from "../Interfaces/button-interfaces";
 import { Button } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
@@ -96,21 +96,23 @@ export const FunkyButtons = (props: FunkyButtonsProps) => (
     </>
 )
 
-export const RinguMsg = () => (
-    <Typography variant="h6" mt={2} color="red">
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS 
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
-        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS 
-    </Typography>
+export const RockerButtons = (props: RockerButtonsProps) => (
+  <>
+<Typography variant="h6" mt={2}>
+  Hair
+  </Typography>  
+  <Button onClick={props.handleClickHair}>Change Hair Color</Button>
+  <Typography  variant="h6" gutterBottom>
+  Glasses & Accessories
+  </Typography>  
+  <Button onClick={props.handleClickGlasses}>Change Glasses Color</Button>
+  <Button onClick={props.handleClickGlassesTint}>Change Glasses Tint Color</Button>
+  <Button onClick={props.handleClickHairbands}>Change Bandana Color</Button>
+  <Typography  variant="h6" gutterBottom>
+  Shirt
+  </Typography>
+      <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>
+  </>
 )
 
 export const GreenGablesButtons = (props: GreenGablesButtonsProps) => (
@@ -129,4 +131,21 @@ export const GreenGablesButtons = (props: GreenGablesButtonsProps) => (
       </Typography>
       <Button onClick={props.handleClickShirt}>Change Shirt Color</Button>
 </>
+)
+
+export const RinguMsg = () => (
+    <Typography variant="h6" mt={2} color="red">
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS 
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS
+        SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS SEVEN DAYS 
+    </Typography>
 )

@@ -1,6 +1,6 @@
-import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons, MakeupButtons, StandardButtons, RinguMsg, GreenGablesButtons } from "../Buttons/colorpicker-buttons";
+import { CatButtons, DudeButtons, HearingAidButtons, FunkyButtons, MakeupButtons, StandardButtons, RinguMsg, GreenGablesButtons, RockerButtons } from "../Buttons/colorpicker-buttons";
 import { 
-  handleClickHair, handleClickBeard, handleClickEyelids, handleClickEyes, handleClickGlasses, handleClickInner, handleClickJewellery, handleClickLips, handleClickOuter, handleClickShirt, handleClickUnderCut, handleClickHat, handleClickHairbands
+  handleClickHair, handleClickBeard, handleClickEyelids, handleClickEyes, handleClickGlasses, handleClickInner, handleClickJewellery, handleClickLips, handleClickOuter, handleClickShirt, handleClickUnderCut, handleClickHat, handleClickHairbands, handleClickGlassesTint
 } from "../onClick-handlers";
 
 //This function renders buttons dynamically based on the value of the imageString prop, and passes in the appropriate handleClick props with a color parameter.
@@ -43,6 +43,17 @@ export const RenderButtons = (imageString: string,color: string) => {
           <GreenGablesButtons handleClickHair={() => handleClickHair(color)} handleClickHat={() => handleClickHat(color)}
           handleClickHairbands={() => handleClickHairbands(color)} handleClickShirt={() => handleClickShirt(color)}
           />
+          <MakeupButtons handleClickLips={() => handleClickLips(color)}handleClickEyelids={() => handleClickEyelids(color)}/>
+          <HearingAidButtons handleClickOuter={() => handleClickOuter(color)} handleClickInner={() => handleClickInner(color)} />
+          </>
+        )
+      }
+      else if(imageString === "Rockin'Lela") {
+        return(
+          <>
+          <RockerButtons handleClickHair={() => handleClickHair(color)} handleClickGlasses={() => handleClickGlasses(color)}
+          handleClickGlassesTint={() => handleClickGlassesTint(color)}
+          handleClickHairbands={() => handleClickHairbands(color)} handleClickShirt={() => handleClickShirt(color)}/>
           <MakeupButtons handleClickLips={() => handleClickLips(color)}handleClickEyelids={() => handleClickEyelids(color)}/>
           <HearingAidButtons handleClickOuter={() => handleClickOuter(color)} handleClickInner={() => handleClickInner(color)} />
           </>

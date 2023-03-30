@@ -21,6 +21,10 @@ export const handleClickGlasses = (color: string) => {
     changeColor("eyeglasses", color);
   };
 
+export const handleClickGlassesTint = (color: string) => {
+  changeColor("eyeglasses-glasses", color);
+};
+
 export const handleClickOuter = (color: string) => {
     changeColor("hearingaid-outer", color)
   };

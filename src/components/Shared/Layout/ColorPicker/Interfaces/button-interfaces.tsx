@@ -41,3 +41,16 @@ export interface GreenGablesButtonsProps {
   handleClickHat: () => void;
   handleClickHairbands: () => void;
 }
+
+export interface RockerButtonsProps {
+  handleClickHair: () => void;
+  handleClickShirt: () => void;
+  handleClickHairbands: () => void;
+  handleClickGlasses: () => void;
+  handleClickGlassesTint: () => void;
+}
+
+export interface NoGlassesButtonsProps {
+  handleClickHair: () => void;
+  handleClickShirt: () => void;
+}
