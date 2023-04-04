@@ -10,6 +10,9 @@ In this project, I've experimented with vector graphics to create a navbar with 
 * Material-UI
 * Vector graphics, made in Vectornator
 
+## Deployment
+This app has been deployed to GitHub Pages. You can access the deployed version by navigating to: https://canoodlingsocks.github.io/my-interactive-avatar/
+
 ## Installation
 1. Clone the repository to your local machine.
 2. Run ```npm install``` in the terminal to install the necessary dependencies.
