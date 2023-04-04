@@ -4,7 +4,7 @@ import Layout from "./components/Shared/Layout/layout";
 
 const AppRouter = () => {
     return (
-    <BrowserRouter>
+    <BrowserRouter basename="/my-interactive-avatar">
 
       <Routes>
         <Route element={<Layout />}>
