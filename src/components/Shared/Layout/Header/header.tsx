@@ -9,11 +9,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from './logo';
 
 const pages = [
   {
-    to: 'https://www.linkedin.com/in/daniela-escobar-b91674234',
+    url: 'https://www.linkedin.com/in/daniela-escobar-b91674234',  // Changed from `to` to `url` for consistency
     name: 'My Linkedin'
   }
 ];
@@ -25,8 +24,12 @@ const Header = () => {
     setAnchorElNav(anchorElNav ? null : event.currentTarget);
   };
 
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ width: '100%', zIndex: (theme) => theme.zIndex.drawer - 1 }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -36,21 +39,25 @@ const Header = () => {
             component="a"
             href="/"
             sx={{
-              mr: 0,
-              display: { xs: 'none', sm: 'flex' },
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              justifyContent: 'center'
             }}
           >
-            ChubbyBot
+            Interactive Lela Picker
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none'} }}>
+          {/* Menu Icon for small screens */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
             <IconButton
               size="large"
+              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleNavMenu}
@@ -58,67 +65,69 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map(page => (
-                <MenuItem key={page.name} href={page.to} onClick={handleNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
-          <Logo />
+
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 2,
-              display: { xs: 'flex', sm: 'none' },
+              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              justifyContent: 'center'
             }}
           >
-            ChubbyBot
+            My Lela Picker
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, ml: 5 }}>
+
+          {/* Desktop */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
-                href={page.to}
-                onClick={handleNavMenu}
-                target='blank_'
-                rel='noreferrer'
+                href={page.url}
+                onClick={handleCloseNavMenu}
+                target='_blank'
+                rel='noopener noreferrer'
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page.name}
               </Button>
             ))}
           </Box>
+
+          {/* Mobile */}
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            keepMounted
+            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{ display: { xs: 'block', md: 'none' } }}
+          >
+            {pages.map((page) => (
+              <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <a href={page.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    {page.name}
+                  </a>
+                </Typography>
+              </MenuItem>
+            ))}
+          </Menu>
+
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
+
 export default Header;

@@ -1,20 +1,27 @@
-import SelfieIcon from "../Selfies/selfie-icon";
-import EmoSelfieIcon from "../Selfies/emoselfie-icon";
-import AnimuSelfieIcon from "../Selfies/animuselfie-icon";
-import ShortHairSelfieIcon from "../Selfies/shorthairselfie-icon";
-import BraidedSelfieIcon from "../Selfies/braidedselfie-icon";
-import VulcanSelfieIcon from "../Selfies/vulcanselfie-icon";
-import StraightHairSelfieIcon from "../Selfies/straighthairselfie-icon";
-import BracesSelfieIcon from "../Selfies/bracesselfie-icon";
-import CatIcon from "../Selfies/cat-icon";
-import GreenGablesSelfieIcon from "../Selfies/greengablesselfie-icon";
-import TheRingSelfieIcon from "../Selfies/theringselfie-icon";
-import DudeSelfieIcon from "../Selfies/dudeselfie-icon";
-import RocknRollSelfieIcon from "../Selfies/rocknrollselfie-icon";
-import ShoweredSelfieIcon from "../Selfies/showeredselfie-icon";
-import PoofySelfieIcon from "../Selfies/poofyselfie-icon";
-import FunkySelfieIcon from "../Selfies/funkyselfie-icon";
-import ChildSelfieIcon from "../Selfies/childselfie-icon";
+import OriginalLela from "../Selfies/original-lela";
+import ArtsyLela from "../Selfies/artsy-lela";
+import VampireLela from "../Selfies/vampire-lela";
+import LowPolyLela from "../Selfies/low-poly-lela";
+import OldLela from "../Selfies/old-lela";
+import HotdogFingersLela from "../Selfies/hotdog-fingers-lela";
+import ZombieLela from "../Selfies/zombie-lela";
+import RockinLela from "../Selfies/rockin-lela";
+import PoofyLela from "../Selfies/poofy-lela";
+import ChildLela from "../Selfies/child-lela";
+import FreshlyShoweredLela from "../Selfies/freshly-showered-lela";
+import FunkyLela from "../Selfies/funky-lela";
+import BracesLela from "../Selfies/braces-lela";
+import RealisticLela from "../Selfies/realistic-lela";
+import LelaOfGreenGables from "../Selfies/lela-of-green-gables";
+import CatLela from "../Selfies/cat-lela";
+import RinguLela from "../Selfies/ringu-lela";
+import DudeLela from "../Selfies/dude-lela";
+import BraidedLela from "../Selfies/braided-lela";
+import ShortHairLela from "../Selfies/short-hair-lela";
+import VulcanLela from "../Selfies/vulcan-lela";
+import StraightHairLela from "../Selfies/straight-hair-lela";
+import AnimuLela from "../Selfies/animu-lela";
+import EmoLela from "../Selfies/emo-lela";
 
 export type SelfieType = {
     randomImage: string
@@ -22,45 +29,59 @@ export type SelfieType = {
 
 const SelfiePicker = (props: SelfieType) => {
 
-const imageNames = props.randomImage
+    const imageNames = props.randomImage
 
     switch (imageNames) {
-        case "EmoLela":
-            return <EmoSelfieIcon />
         case "Lela":
-            return <SelfieIcon />
-        case "AnimuLela":
-            return <AnimuSelfieIcon />
-        case "ShortHairLela":
-            return <ShortHairSelfieIcon />
-        case "BraidedLela":
-            return <BraidedSelfieIcon />
-        case "VulcanLela":
-            return <VulcanSelfieIcon />
-        case "StraightHairLela":
-            return <StraightHairSelfieIcon />
-        case "BracesLela":
-            return <BracesSelfieIcon />
-        case "WhatTheCat":
-            return <CatIcon />
-        case "LelaOfGreenGables":
-            return <GreenGablesSelfieIcon />
-        case "RinguLela":
-            return <TheRingSelfieIcon />
-        case "DudeLela":
-            return <DudeSelfieIcon />
+            return <OriginalLela />
+        case "ArtsyLela":
+            return <ArtsyLela />
+        case "VampireLela":
+            return <VampireLela />
+        case "LowPolyLela":
+            return <LowPolyLela />
+        case "OldLela":
+            return <OldLela />
+        case "HotdogFingersLela":
+            return <HotdogFingersLela />
+        case "ZombieLela":
+            return <ZombieLela />
         case "Rockin'Lela":
-            return <RocknRollSelfieIcon />
-        case "FreshlyShoweredLela":
-            return <ShoweredSelfieIcon />
+            return <RockinLela />
         case "PoofyLela":
-            return <PoofySelfieIcon />
-        case "FunkyLela":
-            return <FunkySelfieIcon />
+            return <PoofyLela />
         case "ChildLela":
-            return <ChildSelfieIcon />
+            return <ChildLela />
+        case "FreshlyShoweredLela":
+            return <FreshlyShoweredLela />
+        case "FunkyLela":
+            return <FunkyLela />
+        case "BracesLela":
+            return <BracesLela />
+        case "RealisticLela":
+            return <RealisticLela />
+        case "EmoLela":
+            return <EmoLela />
+        case "AnimuLela":
+            return <AnimuLela />
+        case "BraidedLela":
+            return <BraidedLela />
+        case "VulcanLela":
+            return <VulcanLela />
+        case "StraightHairLela":
+            return <StraightHairLela />
+            case "LelaOfGreenGables":
+                return <LelaOfGreenGables />
+        case "CatLela":
+            return <CatLela />
+        case "RinguLela":
+            return <RinguLela />
+        case "DudeLela":
+            return <DudeLela />
+        case "ShortHairLela":
+            return <ShortHairLela />
         default:
-            return <SelfieIcon />
+            return <OriginalLela />
     }
 }
 

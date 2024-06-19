@@ -15,27 +15,32 @@ const theme = createTheme({
   });
 
 const images = [
-    "Lela",
-    "EmoLela",
-    "AnimuLela",
-    "ShortHairLela",
-    "BraidedLela",
-    "VulcanLela",
-    "StraightHairLela",
-    "BracesLela",
-    "LelaOfGreenGables",
-    "WhatTheCat",
-    "RinguLela",
-    "DudeLela",
-    "FunkyLela",
-    "Rockin'Lela",
-    "FreshlyShoweredLela",
-    "PoofyLela",
-    "ChildLela"
+  "Lela",
+  "ArtsyLela",
+  "VampireLela",
+  "LowPolyLela",
+  "OldLela",
+  "HotdogFingersLela",
+  "ZombieLela",
+  "Rockin'Lela",
+  "PoofyLela",
+    "ChildLela",
+  "FreshlyShoweredLela",
+  "FunkyLela",
+  "BracesLela",
+  "RealisticLela",
+  "CatLela",
+  "RinguLela",
+  "LelaOfGreenGables",
+  "BraidedLela",
+  "VulcanLela",
+  "DudeLela",
+  "StraightHairLela",
+  "AnimuLela",
+  "EmoLela"
 ];
 
 function Home() {
-
 
     const [imageString, setImageString] = useState<string>("Lela");
     const [displayedImageName, setDisplayedImageName] = useState<string>("Lela");
@@ -65,7 +70,7 @@ function Home() {
             <Box
                 display="flex"
                 justifyContent="center"
-                height="400px"
+                height="380px"
             >
                 <SelfiePicker {...SelfieType} />
             </Box>

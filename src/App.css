@@ -1,7 +1,11 @@
-/* For testing purposes*/
+/* Directly affect Colors For Testing Purposes*/
 
  /* .hair {
-  fill: rgb(245, 255, 52);
+  fill: rgb(5, 59, 237);
+}  */
+
+/* .hair-paint {
+  fill: rgb(255, 4, 159);
 } */
 
 /*
@@ -25,6 +29,7 @@
   fill:rgb(255, 0, 183)
 } */
 
+/* Ringu-Lela Spiral Spin */
 .ringu-spin {
   position: absolute;
   top: 0;
@@ -43,4 +48,45 @@
 
 .ringu-spin {
   animation: spin 2s linear infinite;
+}
+
+/* Freshly Showered Lela Shaking Stars */
+@keyframes shake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  5%, 55% {
+    transform: translate(-2px, 1px);
+  }
+  10%, 60% {
+    transform: translate(2px, 1px);
+  }
+  15%, 65% {
+    transform: translate(2px, -1px);
+  }
+  20%, 70% {
+    transform: translate(-2px, -1px);
+  }
+  25%, 75% {
+    transform: translate(-2px, 1px);
+  }
+  30%, 80% {
+    transform: translate(2px, 1px);
+  }
+  35%, 85% {
+    transform: translate(2px, -1px);
+  }
+  40%, 90% {
+    transform: translate(-2px, -1px);
+  }
+  45%, 95% {
+    transform: translate(-2px, 1px);
+  }
+  50% {
+    transform: translate(2px, 1px);
+  }
+}
+
+.stars {
+  animation: shake 0.5s linear infinite;
 }
