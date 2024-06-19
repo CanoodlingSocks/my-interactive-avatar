@@ -1,14 +1,18 @@
 # Interactive Avatar 
-This is a personal project where I use React, TypeScript, and Material-UI to experiment with vector graphics. The website is designed to be responsive with both desktop and mobile modes.
+A simple frontend project with a dynamic and interactive colorpicker and vector graphics.
 
 ## About the project
-In this project, I've experimented with vector graphics to create a navbar with a vector logo of my son's favourite toy robot, and an interactive vector image of myself. This is my first real attempt at using vector graphics in a web development environment.
+I created this project early in 2023 and it was my first real attempt at using vector graphics in a web development environment. It started with me simply wanted to try out Material-UI and I thought it would be fun to try and create my own logo in the header. I based that logo off my son's then favourite toy which was a small robot. That logo has since been removed, but I was still curious whether or not I could create something bigger, something more interactive with the vector images. That turned into the now finished **Interactive Lela Picker**! 
+
+I had tons of fun with drawing all the different versions of myself and I've learned so much about working with vector graphics. 
+
+Now I have moved on to other projects but this one I will always hold dear as it was my first big project ❤️
 
 ## Technologies Used
 * React
 * TypeScript
 * Material-UI
-* Vector graphics, made in Vectornator
+* Vector graphics, made in Vectornator (now Linearity Curve)
 
 ## Deployment
 This app has been deployed to GitHub Pages. You can access the deployed version by navigating to: https://canoodlingsocks.github.io/my-interactive-avatar/
@@ -22,9 +26,8 @@ This app has been deployed to GitHub Pages. You can access the deployed version 
 ### Hey, it's me!
 ![Selfie](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/Lela.png)
 
-### Change hairstyle!
-![Short hair me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/DifferentLela.png) ![Braided me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/BraidedLela.png)
-![Anime me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/OGAnimuLela.png)
+### Change Hairstyles and Lelas!
+![](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/ezgif-4-4035cbc813.gif)
 
 ### Fiddle around with the colorpicker!
-![Emo me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/EmoLela.png)![Anime me](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/AnimuLela.png)
+![](https://github.com/CanoodlingSocks/my-interactive-avatar/blob/main/src/example-img/ezgif-4-ecd149ffe4.gif)
