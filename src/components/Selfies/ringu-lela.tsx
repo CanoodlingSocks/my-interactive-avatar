@@ -1,6 +1,6 @@
 import React from "react";
 
-function TheRingSelfieIcon() {
+function RinguLela() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -118,4 +118,4 @@ function TheRingSelfieIcon() {
   );
 }
 
-export default TheRingSelfieIcon;
+export default RinguLela;

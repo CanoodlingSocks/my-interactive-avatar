@@ -11,7 +11,7 @@ const Layout = () => (
   direction="column"
   alignItems="center"
   justifyContent="center"
-  style={{ minWidth:"100&", minHeight:"80vh", display:"flex", flexDirection:"column", justifyContent:"center"}}
+  style={{ minWidth:"100&", minHeight:"80vh", display:"flex", flexDirection:"column", justifyContent:"center", paddingTop:"50px"}}
 >
         <Grid item xs={3} md={4}>
         <Outlet />

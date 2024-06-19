@@ -6,17 +6,19 @@ import { styled } from '@mui/material/styles';
 import { ColorPickerProps, ColorPickerBtnProps } from './Interfaces/colorpicker-interfaces';
 import { RenderButtons } from './Buttons/render-buttons';
 
-export function changeColor(className: string, newColor: string) {
-  const elements = document.getElementsByClassName(
-    className
-  ) as HTMLCollectionOf<SVGElement>;
+export function changeColor(className: string, newColor: string, useStroke = false) {
+  const elements = document.getElementsByClassName(className) as HTMLCollectionOf<SVGElement>;
   for (let i = 0; i < elements.length; i++) {
     const element = elements[i];
-    if (!element.hasAttribute("data-color")) {
-      // Store the original color as a data attribute
-      element.setAttribute("data-color", element.style.fill);
+    if (useStroke) {
+      element.style.stroke = newColor;
+    } else {
+      if (!element.hasAttribute("data-color")) {
+        // Store the original color as a data attribute
+        element.setAttribute("data-color", element.style.fill);
+      }
+      element.style.fill = newColor;
     }
-    element.style.fill = newColor;
   }
 }
 

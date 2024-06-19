@@ -4,6 +4,14 @@ export interface StandardButtonsProps {
   handleClickShirt: () => void;
 }
 
+export interface RealisticButtonProps {
+  handleClickHair: () => void;
+  handleClickFineHair: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+  handleCombinedHairChange: () => void; 
+}
+
 export interface CatButtonsProps {
   handleClickHair: () => void;
   handleClickEyes: () => void;
@@ -62,4 +70,38 @@ export interface AnimuButtonsProps {
   handleClickShirt: () => void;
   handleClickJewellery: () => void;
   handleClickHat: () => void;
+}
+
+export interface ArtsyButtonsProps {
+  handleClickHair: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+  handleClickHairPaint: () => void;
+  handleClickShirtPaint: () => void;
+  handleClickLipsPaint: () => void;
+  handleClickFacePaint: () => void;
+}
+
+export interface VampireButtonsProps {
+  handleClickHair: () => void;
+  handleClickEyes: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+  handleClickJewellery: () => void;
+  handleClickRuby: () => void; 
+  handleClickLips: () => void;
+}
+
+export interface ZombieButtonsProps {
+  handleClickHair: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+  handleClickInner: () => void;
+}
+
+export interface BracesButtonsProps {
+  handleClickHair: () => void;
+  handleClickGlasses: () => void;
+  handleClickShirt: () => void;
+  handleClickJewellery: () => void;
 }
